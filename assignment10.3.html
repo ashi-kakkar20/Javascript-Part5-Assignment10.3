@@ -1,0 +1,76 @@
+<!-- This assignment helps to master the Inheritance concept in JS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 10.3</title>
+</head>
+<body>
+    <script>
+    class Dog
+    {
+        constructor(name)
+        {
+            this.name=name;
+        }
+        get name()
+        {
+            return name;
+        }
+
+        set name(value)
+        {
+            name=value;
+        }
+
+        speak()
+        {
+            return "Woof";
+        }
+    }    
+
+    class Labrador extends Dog //Class Labrador is a child class that inherits from the parent class Dog
+    {
+        constructor(color,breedweight)
+        {
+            super();
+            this.color1=color;
+            this.breedweight1=breedweight;
+        }
+
+        get color()
+        {
+            return color1;
+        }
+
+        set color(value)
+        {
+            color1=value;
+        }
+
+        get breedweight()
+        {
+            return breedweight1;
+        }
+
+        set breedweight(value)
+        {
+            breedweight1=value;
+        }
+
+        speak() // child class method overrides the parent method
+        {
+            super.speak();
+            return "Labarador says Woof";
+        }
+
+
+    }
+    
+    let obj1= new Labrador('brown',34); //creating an object for the child class
+    console.log(obj1.speak());
+    </script>
+</body>
+</html>
